@@ -1,0 +1,3 @@
+exclude: [CNAME, compass.rb, Gemfile, Gemfile.lock, Guardfile, sass, javascripts, templates, README.md]
+
+auto: true
