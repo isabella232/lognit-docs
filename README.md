@@ -1,11 +1,20 @@
 # Site de documentação do Lognit
 
-## Configure
+## Configure o ambiente
+
+
+### Mantendo o ambiente atual
 
     gem install bundler
     bundle install
     
-## Execute
+    
+### Gerando as dependências estáticas
+    
+    bundle exec guard
+    
+    
+## Execute a aplicação
 
     jekyll --server
     
