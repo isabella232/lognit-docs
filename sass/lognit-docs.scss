@@ -8,15 +8,19 @@ body {
 }
 
 
-$left-margin: 40px;
+$left-margin: 60px;
 $title-padding: 20px;
 
 $main-menu-top: 80px;
-$main-menu-width: 300px;
+$main-menu-width: 320px;
 $content-left-margin: 40px;
+
+$content-top: 40px;
+$content-bottom: 80px;
 
 .static-content {
   position: fixed;
+  width: $main-menu-width;
   top: $main-menu-top;
 }
 
@@ -32,7 +36,11 @@ $content-left-margin: 40px;
     padding-left: $left-margin;
     list-style-type: none;
     li {
-
+      line-height: 2;
+    }
+    
+    &.inner {
+      padding-left: 20px;
     }
   }
 }
@@ -44,5 +52,7 @@ $content-left-margin: 40px;
 
 #content {
   position: absolute;
+  top: $content-top;
   left: $main-menu-width + $content-left-margin;
+  padding-bottom: $content-bottom;
 }
