@@ -6,3 +6,43 @@
 body {
   
 }
+
+
+$left-margin: 40px;
+$title-padding: 20px;
+
+$main-menu-top: 80px;
+$main-menu-width: 300px;
+$content-left-margin: 40px;
+
+.static-content {
+  position: fixed;
+  top: $main-menu-top;
+}
+
+#main-menu {
+  margin-bottom: 60px;
+  h1 {
+    background-color: #f1f1f1;
+    padding: $title-padding $title-padding $title-padding $left-margin;
+  }
+  
+  ul {
+    margin: 0;
+    padding-left: $left-margin;
+    list-style-type: none;
+    li {
+
+    }
+  }
+}
+
+.disclaimer {
+  font-size: 11px;
+  padding-left: $left-margin;
+}
+
+#content {
+  position: absolute;
+  left: $main-menu-width + $content-left-margin;
+}

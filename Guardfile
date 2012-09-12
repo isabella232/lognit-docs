@@ -8,10 +8,10 @@ guard 'livereload' do
   watch(%r{^public/assets/.*\.css$})
 end
 
-asset_paths = %w(javascripts/app javascript/vendor templates)
+asset_paths = %w(javascripts/app javascripts/vendor templates)
 
-guard 'sprockets', :destination => "public/javascripts", :asset_paths => asset_paths do
-  watch (%r{javascript/vendor/.*\.js$}) {"dependencies.js"}
-  watch (%r{javascript/app/.*\.js$}) {"application.js"}
+guard 'sprockets', :destination => "public/assets", :asset_paths => asset_paths do
+  watch (%r{javascripts/vendor/.*\.js$}) {"dependencies.js"}
+  watch (%r{javascripts/app/.*\.js$}) {"application.js"}
   watch (%r{templates/.*\.ejs}) {"application.js"}
 end

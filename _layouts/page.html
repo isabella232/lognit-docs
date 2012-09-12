@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <meta http-equiv = "X-UA-Compatible" content="chrome=1">
+  <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="public/assets/twitter-bootstrap.css">
+  <link rel="stylesheet" href="public/assets/lognit-docs.css">
+</head>
+<body>
+      
+      <section class="static-content">        
+        <div class="row">
+          <section id="main-menu" class="span4">
+            <h1>Lognit</h1>
+  
+            {% include main-menu.html %}
+          </section>
+        </div>
+
+        <div class="row">      
+          <div class="span4">
+            <p class="disclaimer">Lognit é um produto <a href="http://intelie.com">Intelie</a>. Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+    <section id="content">
+      {{ content }}
+    </section>
+
+</body>
+</html>

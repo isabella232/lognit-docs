@@ -1,0 +1,27 @@
+.static-content {
+  position: fixed;
+  top: 80px;
+}
+
+#main-menu {
+  margin-bottom: 60px;
+}
+#main-menu h1 {
+  background-color: #f1f1f1;
+  padding: 20px 20px 20px 40px;
+}
+#main-menu ul {
+  margin: 0;
+  padding-left: 40px;
+  list-style-type: none;
+}
+
+.disclaimer {
+  font-size: 11px;
+  padding-left: 40px;
+}
+
+#content {
+  position: absolute;
+  left: 340px;
+}
