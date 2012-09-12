@@ -8,13 +8,7 @@
     gem install bundler
     bundle install
     
-    
-### Gerando as dependências estáticas
-    
-    bundle exec guard
-    
-    
 ## Execute a aplicação
 
-    jekyll --server
+    foreman start
     

@@ -7,7 +7,7 @@ gem 'guard-livereload'
 gem 'guard-sprockets'
 gem 'ejs'
 gem 'rb-fsevent'
-
+gem 'foreman'
 gem 'jekyll'
 
 require 'rbconfig'
