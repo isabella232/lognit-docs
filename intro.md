@@ -24,7 +24,6 @@ As mensagens de log podem ter, opcionalmente, algumas propriedades que podem ser
 Além do texto da mensagem em si, que também é indexado e pode ser consultado.
 
 O Lognit espera receber mensagens de log no formato [syslog](http://en.wikipedia.org/wiki/Syslog). 
-<!--<30>Aug 30 15:07:50 ubuntu dhclient: DHCPREQUEST of 10.42.1.18 on eth0 to 10.42.0.1 port 67-->
 
 ## Passo a passo do processamento
 
