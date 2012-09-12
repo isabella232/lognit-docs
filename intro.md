@@ -49,6 +49,6 @@ As mensagens são armazenadas nos servidores do Lognit ou em storages remotos, o
 
 ## Capacidade
 
-O Lognit é executado em uma ou mais máquinas simultaneamente. Cada um dos nós é capaz de processar mais de 20Mb/s em mensagens de log originais, com escalabilidade linear. Ou seja, um cluster de 5 máquinas é capaz de processar 100Mb/s de mensagens originais.
+O Lognit é executado em uma ou mais máquinas simultaneamente. Cada um dos nós é capaz de processar mais de 20Mb/s em mensagens de log originais, com escalabilidade linear. Ou seja, um cluster de 5 máquinas é capaz de processar **100Mb/s** de mensagens originais.
 
 > Dados aproximados para um servidor com 16Gb de RAM, processador i7 de 4 cores e disco rígido de 7200rpm.
