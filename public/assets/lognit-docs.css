@@ -4,6 +4,11 @@
   top: 80px;
 }
 
+/* TIPOGRAFIA */
+h1 {
+  font-family: 'Lato', sans-serif;
+}
+
 #main-menu {
   margin-bottom: 60px;
 }
