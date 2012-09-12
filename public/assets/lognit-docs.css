@@ -32,5 +32,9 @@
   position: absolute;
   top: 40px;
   left: 360px;
+  right: 440px;
   padding-bottom: 80px;
+}
+#content ul {
+  list-style-type: none;
 }

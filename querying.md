@@ -22,7 +22,7 @@ Para buscar pelo termo *http*, por exemplo, basta digitar o termo no campo de bu
     http
 ```
 
-O segundo caso é uma **consulta estruturada**, em que a busca é realizada em propriedades específicas. Por exemplo, para obter mensagens somente do servidor *server1*:
+O segundo caso é uma **consulta estruturada**, em que a busca é realizada em propriedades específicas. Por exemplo, para obter mensagens somente do host *server1*:
 
 ```
     host: server1
@@ -38,7 +38,7 @@ Toda consulta por conteúdo, de texto livre ou estruturada, além de estar habil
 
 > O cliente de linha de comando ([nit](http://github.com/intelie/lognit-cli)) permite distinguir entre consultas históricas e de tempo real utilizando a opção -f.
 
-[Veja mais sobre consultas por conteúdo](content-query.html)
+[Veja mais sobre consultas por conteúdo &rarr;](content-query.html)
 
 
 ### [Consultas agregadoras](aggregation-query.html)
@@ -65,4 +65,4 @@ Existem diversos operadores que podem ser utilizados para gerar estatísticas e 
 
 Toda consulta agregadora é habilitada para receber novos eventos em tempo real, porém não realiza nenhum tipo de agregação histórica.
 
-[Veja mais sobre consultas agregadoras](aggregation-query.html)
+[Veja mais sobre consultas agregadoras &rarr;](aggregation-query.html)

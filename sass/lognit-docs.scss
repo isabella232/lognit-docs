@@ -14,6 +14,7 @@ $title-padding: 20px;
 $main-menu-top: 80px;
 $main-menu-width: 320px;
 $content-left-margin: 40px;
+$content-right-margin: 440px;
 
 $content-top: 40px;
 $content-bottom: 80px;
@@ -54,5 +55,10 @@ $content-bottom: 80px;
   position: absolute;
   top: $content-top;
   left: $main-menu-width + $content-left-margin;
+  right: $content-right-margin;
   padding-bottom: $content-bottom;
+  
+  ul {
+    list-style-type: none;
+  }
 }
