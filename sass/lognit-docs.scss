@@ -3,10 +3,10 @@
 @import "compass/utilities/general/clearfix";
 @import "compass/typography/text/ellipsis";
 
-body {
-  
-}
 
+body {
+
+}
 
 $left-margin: 60px;
 $title-padding: 20px;
@@ -37,8 +37,14 @@ h1{
 #main-menu {
   margin-bottom: 60px;
   h1 {
-    background-color: #f1f1f1;
     padding: $title-padding $title-padding $title-padding $left-margin;
+    background-color: #f1f1f1;
+
+    div {
+      width: 149px;
+      height: 63px;
+      background: image-url("logo_docs.png") no-repeat 0 0;      
+    }
   }
   
   ul {

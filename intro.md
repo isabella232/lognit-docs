@@ -30,19 +30,19 @@ O Lognit espera receber mensagens de log no formato [syslog](http://en.wikipedia
 
 Cada mensagem de log que chega ao sistema, através do protocolo [syslog](http://en.wikipedia.org/wiki/Syslog) ou [rsyslog](http://www.rsyslog.com/doc/manual.html), passa por quatro estágios de processamento até estar disponível para qualquer consulta.
 
-### Enriquecimento do evento
+### 1. Enriquecimento do evento
 
 O Lognit permite que sejam adicionadas propriedades, de maneira estruturada, a cada mensagem de log, tanto por meio de configurações na interface web do sistema como por meta-dados descritos na mensagem em si. Essas propriedades facilitam consultas posteriores e permitem ao usuário organizar os dados de maneira mais fácil.
 
-### Indexação
+### 2. Indexação
 
 Todo o conteúdo da mensagem original e das propriedades adicionadas no primeiro passo são indexadas, o que torna a mensagem disponível para consultas por qualquer de seus termos.
 
-### Notificação de consultas em andamento
+### 3. Notificação de consultas em andamento
 
 Se houver consultas realizadas no momento em que uma mensagem chega no sistema, ela é imediatamente entregue a quem está consultando, seja pela interface web, pelo [nit](http://github.com/intelie/lognit-cli), ou por meio da API que o Lognit fornece para buscas.
 
-### Armazenamento
+### 4. Armazenamento
 
 As mensagens são armazenadas nos servidores do Lognit ou em storages remotos, o que permite que sejam acessadas em consultas históricas.
 
