@@ -8,7 +8,7 @@ description: "Como enviar os logs de sua aplicação"
 
 O Lognit recebe logs através dos protocolos [syslog](http://en.wikipedia.org/wiki/Syslog) ou [rsyslog](http://www.rsyslog.com/doc/manual.html).
 
-Os próprios clientes destes protocolos podem ser utilizados para envio dos logs. Sistemas operacionais UNIX, por exemplo, permitem a configuração através do arquivo */etc/syslog.conf*.
+Os próprios clientes destes protocolos podem ser utilizados para envio dos logs. Sistemas operacionais UNIX, por exemplo, permitem a configuração através do arquivo */etc/rsyslog.conf*.
 
 No exemplo abaixo, todos os logs de um servidor estão sendo enviados para a porta *5140* de um servidor Lognit, pelo cliente syslog. O Lognit realiza o papel de um servidor (r)syslog na rede.
 
