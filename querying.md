@@ -45,16 +45,16 @@ Toda consulta por conteúdo, de texto livre ou estruturada, além de estar habil
 
 Consutas agregadoras são úteis para gerar estatísicas sobre as mais diversas mensagens de log que chegam ao Lognit, bem como para limitar o número de mensagens geradas na saída de uma consulta.
 
-Uma consulta agregadora sempre é utilizada em conjunto com uma consulta por conteúdo. Uma consulta agregadora é definida pela sintaxe *=>*. A consulta só por este termo omite alguns parâmetros, mas é o mesmo que buscar por todo o conteúdo disponível, mostrando o número de ocorrências a cada segundo.
+Uma consulta agregadora sempre é utilizada em conjunto com uma consulta por conteúdo. Uma consulta agregadora é definida pelo operador *=>* após o termo buscado. A consulta só por este termo omite alguns parâmetros, mas é o mesmo que mostrar o número total de ocorrências dos resultados a cada segundo.
 
 ```
-    =>
+    http =>
 ```
 
 equivale a 
 
 ```
-    * => count() every 1 sec
+    http => count() every 1 sec
 ```
 
 Existem diversos operadores que podem ser utilizados para gerar estatísticas e agregações de informação disponível. Por exemplo, é possível consultar o número de ocorrências e o tamanho médio das mensagens que contêm http a cada minuto:
