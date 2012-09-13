@@ -6,8 +6,11 @@ category: tips
 tags: [nit, statistics, lognit, logs, rsyslog, syslog]
 ---
 
-# Usando o nit para obter estatísticas do Lognit
+# Usando o nit para obter estatísticas
 
-O cliente de linha de comando tem uma série de funcionalidades interessantes. Uma delas é o parâmetro *-i*.
+O [nit](http://github.com/intelie/lognit-cli) oferece uma série de parâmetros interessantes. Um deles é a opção *-b*.
+
+Com essa opção, o cliente de linha de comando exibe uma série de informações referentes à busca realizada, como histogramas com a contagem da ocorrência de resultados por host e por horário.
 
 
+![Estatísticas com o nit](/public/assets/stats_nit.png "Estatísticas com o nit")

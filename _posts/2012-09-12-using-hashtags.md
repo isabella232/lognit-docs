@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Usando hashtags para enriquecer mensagens automaticamente
+title: Usando hashtags para enriquecer mensagens
 description: "Dicas para desenvolvedores sobre como enriquecer mensagens enviadas para o Lognit"
 category: tips
 tags: [hashtag, enrich, lognit, logs, rsyslog, syslog]
@@ -12,3 +12,10 @@ Ao desenvolver uma aplicação, o desenvolvedor deseja ter agilidade para debuga
 
 É possível, no entanto, enriquecer mensagens de log automaticamente, utilizando **hashtags (\#)** nas mensagens.
 
+![Exemplo de uso do hashtag](/public/assets/terminal_hashtag.png "Exemplo de uso do hashtag")
+
+Usando o hashtag, o campo **tags** é enriquecido em cada mensagem enviada com o conteúdo da tag.
+
+![Mensagem com tags](/public/assets/web_hashtag.png "Mensagem com tags")
+
+Desta maneira, é possível filtrar o conteúdo de interesse bem mais facilmente. Esta funcionalidade serve não só para desenvolvedores, como pode ser utilizada em diversas situações para marcar mensagens de log específicas.
