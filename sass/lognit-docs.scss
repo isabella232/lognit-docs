@@ -18,7 +18,7 @@ $main-menu-top: 80px;
 $main-menu-width: 320px;
 $content-left-margin: 40px;
 
-$content-width: 490px;
+$content-width: 500px;
 $content-top: 78px;
 $content-bottom: 80px;
 
@@ -55,6 +55,14 @@ h2{
   margin-top:40px;
   color:#333;
   margin-bottom:20px;
+  &.titarticle{
+    padding-left: 30px;
+    background: url("article.png") no-repeat left 3px;
+    font-size: 30px;
+    color:#555;
+    margin-bottom:-10px;
+    margin-top:60px;
+  }
 }
 
 h3{
@@ -77,11 +85,14 @@ h4{
 blockquote{
   margin-top:15px;
   margin-bottom:20px;
+  background: #f1f1f1 url("info.png") no-repeat 5px 8px;
+  padding: 12px 5px 10px 36px;
+  border-left:5px solid #02AFEE;
   p{
     font-family:Arial, sans-serif;
     font-size:12px;
     line-height: 15px;
-    font-style:italic;
+    color:#555;
     }
 }
 
@@ -100,7 +111,7 @@ ul{
     div {
       width: 149px;
       height: 63px;
-      background: image-url("logo_docs.png") no-repeat 0 0;      
+      background: image-url("logo_docs.png") no-repeat 0 0;
     }
   }
   
@@ -144,11 +155,12 @@ ul{
     a{
       display:block;
       height:13px;
-      width:95px;
+      width:85px;
       float:left;
       padding:70px 5px 20px 5px;
       margin-right:5px;
       line-height:96%;
+      font-size:11px;
       &:hover{
         background-color:#00A8E9;
         text-decoration:none;
@@ -168,7 +180,9 @@ ul{
   .madmin{
     background: #f1f1f1 url("admin.png") no-repeat center 8px;
   }
+  .mdevs{
+    background: #f1f1f1 url("devs.png") no-repeat center 8px;
+  }
 }
-
 
 
