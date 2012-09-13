@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Como obter estatísticas utilizando o nit
 description: "Dicas sobre como obter estatísticas do sistema utilizando o cliente de linha de comando (nit)"
 category: tips
