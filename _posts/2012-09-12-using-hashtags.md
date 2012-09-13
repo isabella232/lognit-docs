@@ -19,3 +19,5 @@ Usando o hashtag, o campo **tags** é enriquecido em cada mensagem enviada com o
 ![Mensagem com tags](/public/assets/web_hashtag.png "Mensagem com tags")
 
 Desta maneira, é possível filtrar o conteúdo de interesse bem mais facilmente. Esta funcionalidade serve não só para desenvolvedores, como pode ser utilizada em diversas situações para marcar mensagens de log específicas.
+
+> É possível não só enriquecer a propriedade *tags*, como criar ou enriquecer outras propriedades, utilizando expressões como **#product:myApp** ou expressões com espaços, usando **#{product:my app}**.
