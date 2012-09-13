@@ -25,6 +25,8 @@ Além do texto da mensagem em si, que também é indexado e pode ser consultado.
 
 O Lognit espera receber mensagens de log no formato [syslog](http://en.wikipedia.org/wiki/Syslog). 
 
+[Veja como fazer consultas no sistema &rarr;](querying.html)
+
 ## Passo a passo do processamento
 
 Cada mensagem de log que chega ao sistema, através do protocolo [syslog](http://en.wikipedia.org/wiki/Syslog) ou [rsyslog](http://www.rsyslog.com/doc/manual.html), passa por quatro estágios de processamento até estar disponível para qualquer consulta.
@@ -32,6 +34,8 @@ Cada mensagem de log que chega ao sistema, através do protocolo [syslog](http:/
 ### 1. Enriquecimento do evento
 
 O Lognit permite que sejam adicionadas propriedades, de maneira estruturada, a cada mensagem de log, tanto por meio de configurações na interface web do sistema como por meta-dados descritos na mensagem em si. Essas propriedades facilitam consultas posteriores e permitem ao usuário organizar os dados de maneira mais fácil.
+
+[Veja mais detalhes sobre o processo de enriquecimento na ajuda da administração do Lognit &rarr;](administrating.html)
 
 ### 2. Indexação
 
@@ -45,6 +49,14 @@ Se houver consultas realizadas no momento em que uma mensagem chega no sistema, 
 
 As mensagens são armazenadas nos servidores do Lognit ou em storages remotos, o que permite que sejam acessadas em consultas históricas.
 
+
+## Controle de acesso
+
+Ao realizar uma consulta, um usuário só é notificado sobre mensagens a que tem permissão de visualização. As permissões são associadas às equipes que o usuário pertence, que são controladas pelos administradores do Lognit. 
+
+> Administradores do sistema têm acesso a todas as mensagens de log.
+
+[Veja mais sobre permissões na ajuda da administração do sistema &rarr;](administrating.html)
 
 ## Capacidade
 
