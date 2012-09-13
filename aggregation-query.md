@@ -25,6 +25,7 @@ ex:
 ```
 http 404 => count(), avg(response_time#) by host, app every 30 seconds
 ```
+
 _contagem e média do tempo de resposta de todos os http 404 agrupados por host e app numa janela de 30 segundos_
 
 ## Tipagem estática
@@ -34,16 +35,19 @@ Os tipos envolvidos nas agregações são fortes e estáticos. Todas as propried
 ```
 response_time#
 ```
+
 _converte a propriedade response\_time em um número assumindo o formato americano (en-us)_
 
 ```
 response_time#('pt-br')
 ```
+
 _converte a propriedade response\_time em um número assumindo o formato brasileiro (pt-br)_
 
 ```
 response_time#('pt-br', '###,###.##')
 ```
+
 _converte a propriedade response\_time em um número assumindo o formato brasileiro (pt-br) com separadores_
 
 A formatação segue o mesmo padrão da classe DecimalFormat, do Java.
@@ -55,20 +59,27 @@ Todas as partes da query de agregação são opcionais. Então,
 ```
 http 404 =>
 ```
+
 é o mesmo que:
+
 ```
 http 404 => count() every 1 second
 ```
+
 Além disso, é possível aplicar funções com uma sintaxe alternativa:
 
 ```
 avg(response_time#) 
 ```
+
 é equivalente a
+
 ```
 response_time#:avg()
 ```
+
 ou
+
 ```
 response_time#:avg
 ```
@@ -78,6 +89,7 @@ Isso é bastante útil para compor agregações
 ```
 response_time#:avg:if(response_time# > 1000)
 ```
+
 _média de todos os response times na janela que sejam maiores que 1000 milisegundos_
 
 ## Agregações disponíveis
@@ -86,18 +98,21 @@ _média de todos os response times na janela que sejam maiores que 1000 milisegu
 avg(<number>)
 avg(response_time#)
 ```
+
 _média de todos os valores recebidos na janela de tempo definida_
 
 ```
 count([<object>])
 count(http_status) ou count()
 ```
+
 _contagem de todos os valores não-nulos recebidos para a expressão passada por parâmetro na janela de tempo definida_
 
 ```
 dcount(<object>...)
 dcount(user_agent, ip)
 ```
+
 _contagem de todos os valores distintos para o conjunto de expressões passadas como parâmetro_
 
 Para economizar memória, para mais de 1000 valores distintos, a contagem passa a ser uma estimativa usando HyperLogLog.
@@ -106,6 +121,7 @@ Para economizar memória, para mais de 1000 valores distintos, a contagem passa 
 sum([<number>])
 sum(response_time#)
 ```
+
 _soma de todos os valores numéricos recebidos na janela de tempo definida_
 
 
@@ -113,51 +129,65 @@ _soma de todos os valores numéricos recebidos na janela de tempo definida_
 min(<comparable>) e max(<comparable>)
 min(response_time#)
 ```
+
 _menor (ou maior) valor recebido na janela de tempo definida_
 
 ```
 first(<object>) e last(<object>)
 first(response_time#)
 ```
+
 _primeiro (ou último) valor recebido na janela de tempo definida (comparado utilizando o id da mensagem de log, para ser distribuído)_
 
 ```
 stdev(<number>)
 stdev(response_time#)
 ```
+
 _desvio padrão de todos os valores recebidos na janela de tempo definida_
 
 ```
 if(<aggregation>, <condition>)
 avg(response_time#):if(response_time# > 1000)
 ```
+
 _modificador que somente agrega um valor se a condição for verdadeira_
 
 ```
 overlast(<aggregation>, <number literal>)
 avg(response_time#):overlast(5) 
 ```
+
 _modificador que agrega os resultados das últimas janelas_
 
 ```
 avglast(<numeric aggregation>, <number literal>)
 count():avglast(5) 
 ```
+
 _modificador que efetua a média os resultados das últimas janelas_
 
 ## Operadores e funções disponíveis
 
 ### Operadores aritiméticos: 
-+; - (subtração e negação); \*; / (divisão float); // (divisão inteira); % (mod), \*\* (exponenciação)
+    +
+    - (subtração e negação)
+    *
+    / (divisão float)
+    // (divisão inteira)
+    % (resto da divisão)
+    ** (exponenciação)
 
-### Operadores de comparação: 
-==; !=; >; <; >=; <=
+### Operadores de comparação:
+    ==; !=; >; <; >=; <=
 
 ### Operadores lógicos:
-&, && ou "and"; 
-|, || ou "or"; 
-^ ou xor; 
-! ou not
+    &, && ou "and"
+    |, || ou "or" 
+    ^ ou xor
+    ! ou not
+
+Um exemplo:
 
 ```
 reponse_time# > 1000 and (host == 'aaa' || host == 'bbb')
@@ -168,6 +198,7 @@ reponse_time# > 1000 and (host == 'aaa' || host == 'bbb')
 condition ? if-true, if-false
 response_time < 100 ? 'great!', 'bad...'
 ```
+
 Ele permite uma composição associativa à direita, como o do C++
 
 ```
@@ -187,6 +218,7 @@ response_time#('pt-br', '###,###.00')
 ```
 
 ### Operador de formatação numérica
+
 ```
 <number>#([<locale>[, <format>]])
 @size#('pt-br', '###,###.00')
@@ -197,15 +229,18 @@ ele faz parse.
 
 
 ### Potenciação e logaritmo
+
 ```
 pow(<number>, <exponent>) e log(<number>, <base>)
 ```
 
 ### Função de formatação como bytes
+
 ```
 <number>:bytes([<precision>])
 @size:avg:bytes(3) 
 ```
+
 _tamanho médio da mensagem formatado como bytes com 3 casas decimais. Assim, 123456 é formatado como "120.562 KB"_
 
 ## Propriedades
@@ -217,11 +252,13 @@ valor específico de uma propriedade.
 ```
 tag
 ```
+
 _acessa o primeiro valor da propriedade "tag". O mesmo que tag[0]_
 
 ```
 text[4]
 ```
+
 _acessa o quinto valor da propriedade "text"_ 
 
 Usa a mesma semântica de split que as propriedades indexadas nos log groups:
@@ -231,6 +268,7 @@ Usa a mesma semântica de split que as propriedades indexadas nos log groups:
 ```
 
 é separado como: 
+
 ```
 0: 127.0.0.1
 1: frank
@@ -248,13 +286,17 @@ Além das propriedades normais, propriedades especiais são providas para serem 
 ```
 @size
 ```
+
 _acessa o tamanho (em bytes) da mensagem, este valor já é numérico e pode ser usado em agregações como ```@size:avg```_
 
 ```
 @node
 ```
-_acessa o hostname do nó do cluster que processou a mensagem, permite agregações como 
+
+_acessa o hostname do nó do cluster que processou a mensagem, permite agregações como_
+
 ```
 * => count(), @size:sum:bytes by @node
 ```
+
 _retorna o número de mensagens e bytes processador por nó do cluster a cada segundo_
