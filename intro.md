@@ -15,8 +15,8 @@ O Lognit é uma ferramenta que processa e armazena possivelmente milhares de Tb 
 As mensagens de log podem ter, opcionalmente, algumas propriedades que podem ser facilmente consultados. São elas:
 
 * **host** nome do host que gerou a mensagem 
-* **date** data da criação da mensagem, no formato ddmmyyyy
-* **time** hora da criação da mensagem, no formato hhmm
+* **date** data da criação da mensagem, no formato yyyyMMdd
+* **time** hora da criação da mensagem, no formato HHmmss
 * **facility** um dos [valores definidos pelo protocolo syslog](http://en.wikipedia.org/wiki/Syslog#Facility_Levels)
 * **severity** um dos [valores definidos pelo protocolo syslog](http://en.wikipedia.org/wiki/Syslog#Severity_levels)
 * **app** nome da aplicação que gerou o log
