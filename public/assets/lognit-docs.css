@@ -77,6 +77,11 @@ blockquote p {
   color: #555;
 }
 
+code {
+  font-size: 11px;
+  line-height: 22px;
+}
+
 ul {
   margin-top: 15px;
   margin-bottom: 20px;
