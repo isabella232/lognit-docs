@@ -2,6 +2,7 @@
 layout: page
 title: Desenvolvedores
 description: "Como utilizar a API do Lognit para realizar consultas e para administrar o sistema"
+permalink: /developers/
 ---
 
 # Lognit API

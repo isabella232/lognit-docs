@@ -2,6 +2,7 @@
 layout: page
 title: Consultas agregadorass
 description: "Explicação e dicas de consultas agregadoras no Lognit"
+permalink: /aggregation-query/
 ---
 
 # Consultas agregadoras

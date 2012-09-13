@@ -2,6 +2,7 @@
 layout: page
 title: Fazendo consultas
 description: "Tirando o melhor proveito da interface de busca do lognit"
+permalink: /querying/
 ---
 
 # Realizando consultas
@@ -10,7 +11,7 @@ description: "Tirando o melhor proveito da interface de busca do lognit"
 O Lognit permite dois tipos básicos de consulta: consultas por conteúdo e consultas agregadoras.
 
 
-### [Consutas por conteúdo](content-query.html)
+### [Consutas por conteúdo](/content-query)
 
 Consultas por conteúdo podem ser realizadas utilizando tanto texto como tuplas *propriedade:valor*. 
 
@@ -38,10 +39,10 @@ Toda consulta por conteúdo, de texto livre ou estruturada, além de estar habil
 
 > O cliente de linha de comando ([nit](http://github.com/intelie/lognit-cli)) permite distinguir entre consultas históricas e de tempo real utilizando a opção -f.
 
-[Veja mais sobre consultas por conteúdo &rarr;](content-query.html)
+[Veja mais sobre consultas por conteúdo &rarr;](/content-query)
 
 
-### [Consultas agregadoras](aggregation-query.html)
+### [Consultas agregadoras](/aggregation-query)
 
 Consutas agregadoras são úteis para gerar estatísicas sobre as mais diversas mensagens de log que chegam ao Lognit, bem como para limitar o número de mensagens geradas na saída de uma consulta.
 
@@ -65,4 +66,4 @@ Existem diversos operadores que podem ser utilizados para gerar estatísticas e 
 
 Toda consulta agregadora é habilitada para receber novos eventos em tempo real, porém não realiza nenhum tipo de agregação histórica.
 
-[Veja mais sobre consultas agregadoras &rarr;](aggregation-query.html)
+[Veja mais sobre consultas agregadoras &rarr;](/aggregation-query)

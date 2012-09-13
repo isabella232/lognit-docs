@@ -1,5 +1,7 @@
-permalink: /:title.html
+permalink: /:title/
 
 exclude: [CNAME, compass.rb, Gemfile, Gemfile.lock, Guardfile, sass, javascripts, templates, README.md]
 
 auto: true
+
+base_path: help.lognit.com

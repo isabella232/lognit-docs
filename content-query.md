@@ -2,6 +2,7 @@
 layout: page
 title: Consultas por conteúdo
 description: "Explicação e dicas de consultas por conteúdo no Lognit"
+permalink: /content-query/
 ---
 
 # Consultas por conteúdo

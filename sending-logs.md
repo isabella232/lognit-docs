@@ -2,6 +2,7 @@
 layout: page
 title: Enviando logs para o Lognit
 description: "Como enviar os logs de sua aplicação"
+permalink: /sending-logs/
 ---
 
 # Enviando logs para o Lognit

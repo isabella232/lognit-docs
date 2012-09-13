@@ -2,13 +2,14 @@
 layout: page
 title: Conceitos básicos
 description: "Introdução e conceitos básicos do Lognit"
+permalink: /intro/
 ---
 
 # Conceitos básicos
 
 O Lognit é uma ferramenta que processa e armazena possivelmente milhares de Tb de logs, permitindo consultas em tempo real e análises históricas em milésimos de segundo.
 
-É possível realizar [consultas](querying.html) no Lognit, tanto por meio de sua interface web como através de um cliente de linha de comando, o [nit](http://github.com/intelie/lognit-cli).
+É possível realizar [consultas](/querying) no Lognit, tanto por meio de sua interface web como através de um cliente de linha de comando, o [nit](http://github.com/intelie/lognit-cli).
 
 ## Formato das mensagens
 
@@ -25,7 +26,7 @@ Além do texto da mensagem em si, que também é indexado e pode ser consultado.
 
 O Lognit espera receber mensagens de log no formato [syslog](http://en.wikipedia.org/wiki/Syslog). 
 
-[Veja como fazer consultas no sistema &rarr;](querying.html)
+[Veja como fazer consultas no sistema &rarr;](/querying)
 
 ## Passo a passo do processamento
 
@@ -35,7 +36,7 @@ Cada mensagem de log que chega ao sistema, através do protocolo [syslog](http:/
 
 O Lognit permite que sejam adicionadas propriedades, de maneira estruturada, a cada mensagem de log, tanto por meio de configurações na interface web do sistema como por meta-dados descritos na mensagem em si. Essas propriedades facilitam consultas posteriores e permitem ao usuário organizar os dados de maneira mais fácil.
 
-[Veja mais detalhes sobre o processo de enriquecimento na ajuda da administração do Lognit &rarr;](administrating.html)
+[Veja mais detalhes sobre o processo de enriquecimento na ajuda da administração do Lognit &rarr;](/administrating)
 
 ### 2. Indexação
 
@@ -56,7 +57,7 @@ Ao realizar uma consulta, um usuário só é notificado sobre mensagens a que te
 
 > Administradores do sistema têm acesso a todas as mensagens de log.
 
-[Veja mais sobre permissões na ajuda da administração do sistema &rarr;](administrating.html)
+[Veja mais sobre permissões na ajuda da administração do sistema &rarr;](/administrating)
 
 ## Capacidade
 
