@@ -9,7 +9,7 @@ permalink: /developers/
 
 O Lognit oferece, via HTTP e utilizando autenticação [basic auth](http://en.wikipedia.org/wiki/Basic_access_authentication), acesso à interface de consultas em tempo real e de histórico. Todas as funcionalidades do Lognit são acessíveis via API.
 
-Os exemplos mostrados aqui usando o [nitr](/nit#nitr) que é instalado justamente com o [nit](/nit).
+Os exemplos mostrados aqui usando o [nitr](/nit/#nitr) que é instalado justamente com o [nit](/nit).
 
 ## API REST
 
