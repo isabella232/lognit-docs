@@ -7,7 +7,7 @@ permalink: /intro/
 
 # Conceitos básicos
 
-O Lognit é uma ferramenta que processa e armazena possivelmente milhares de Tb de logs, permitindo consultas em tempo real e análises históricas em milésimos de segundo.
+O Lognit é uma ferramenta que processa e armazena possivelmente dezenas de TB de logs, permitindo consultas em tempo real e análises históricas em milésimos de segundo.
 
 É possível realizar [consultas](/querying) no Lognit, tanto por meio de sua interface web como através de um cliente de linha de comando, o [nit](http://github.com/intelie/lognit-cli).
 
@@ -61,6 +61,6 @@ Ao realizar uma consulta, um usuário só é notificado sobre mensagens a que te
 
 ## Capacidade
 
-O Lognit é executado em uma ou mais máquinas simultaneamente. Cada um dos nós é capaz de processar mais de 20Mb/s em mensagens de log originais, com escalabilidade linear. Ou seja, um cluster de 5 máquinas é capaz de processar **100Mb/s** de mensagens originais.
+O Lognit é executado em uma ou mais máquinas simultaneamente. Cada um dos nós é capaz de processar mais de 20MB/s em mensagens de log originais, com escalabilidade linear. Ou seja, um cluster de 5 máquinas é capaz de processar **100MB/s** de mensagens originais.
 
 > Dados aproximados para um servidor com 16Gb de RAM, processador i7 de 4 cores e disco rígido de 7200rpm.
