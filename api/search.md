@@ -1,6 +1,6 @@
 ---
 layout: page
-title: API de Busca
+title: API de Consultas
 description: "Exemplos de uso"
 permalink: /search/
 ---
@@ -12,7 +12,7 @@ Ponto de acesso:
 
     http://server:port/rest/search
 
-##Busca em tempo real
+##Consulta em tempo real
 
     $ nitr get "search?expression=*=>"
 
@@ -22,7 +22,10 @@ Retorno:
 
 Onde "channel" é o canal do [bayeux](http://svn.cometd.com/trunk/bayeux/bayeux.html) que irá retornar os resultados correspondentes.
 
-##Download dos resultados de uma busca
+Além disso, informações sobre a sintaxe da consulta são retornadas no campo "info". Caso se trate de uma consulta de agregação
+(tenha o operador **=>**), informações sobre os tipos de dados envolvidos também são retornados.
+
+##Download dos resultados de uma consulta
 
     $ nitr get "search/download?expression=*&text=true"
 

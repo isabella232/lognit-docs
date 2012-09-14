@@ -6,7 +6,9 @@ permalink: /nit/
 ---
 #{{ page.title }}
 
-_Lognit Command Line Interface_, ou somente **nit**, é um cliente alternativo para o Lognit. Utiliza a mesma API da interface web para disponibilizar grande parte dos serviços de busca do Lognit.
+_Lognit Command Line Interface_, ou somente **nit**, é um cliente alternativo para o Lognit. Utiliza a mesma API da interface web para disponibilizar grande parte dos serviços de busca do Lognit. O nit é _open-source_ e está disponível no [GitHub do projeto](http://github.com/intelie/lognit-cli).
+
+![Exemplo de busca com o nit](/public/assets/search_nit.png "Estatísticas com o nit")
 
 ## Instalação
 
@@ -23,7 +25,7 @@ Para instalar alguma versão mais antiga, especifique a versão com **-s**.
 Antes de começar a usar o nit, é preciso efetuar login no servidor do Lognit.
 
 O login pode ser efetuado definindo o servidor a se conectar:
-help.
+
     nit -s lognit-server
 
 O cliente irá solicitar usuário e senha. Caso deseje especificá-los na linha de comando, faça como no exemplo:
@@ -73,7 +75,7 @@ Se estiver interessado somente em estatísticas sobre uma consulta, utilize a op
 
 ![Estatísticas com o nit](/public/assets/stats_nit.png "Estatísticas com o nit")
 
-## Lognit REST client (nitr)
+## Lognit REST client (nitr) <a name="nitr">&nbsp;</a>
 
 Ao instalar o nit, também é instalado o comando **nitr**. O nitr é tem como propósito facilitar o acesso à API REST do Lognit. É basicamente um [curl](http://curl.haxx.se/) que compartilha a sessão conectada do nit.
 

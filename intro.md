@@ -9,7 +9,7 @@ permalink: /intro/
 
 O Lognit é uma ferramenta que processa e armazena possivelmente dezenas de TB de logs, permitindo consultas em tempo real e análises históricas em milésimos de segundo.
 
-É possível realizar [consultas](/querying) no Lognit, tanto por meio de sua interface web como através de um cliente de linha de comando, o [nit](http://github.com/intelie/lognit-cli).
+É possível realizar [consultas](/querying) no Lognit, tanto por meio de sua interface web como através de um cliente de linha de comando, o [nit](/nit).
 
 ## Formato das mensagens
 

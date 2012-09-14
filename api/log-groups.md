@@ -21,24 +21,7 @@ Retorno:
     {"data":[{"id":"ff8081813682d0a101368450a92b0018","name":"test log group","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813697fd94013697ffd66c0002","expressions":[{"id":"ff8081813697fd94013697ffd66c0003","key":"a","value":"b"}]}],"spaces":["teste"]}],"total":1,"page":1,"pageSize":10}
 
 
-##Inserir---
-layout: page
-title: API de Busca
-description: "Exemplos de uso"
-permalink: /search/
----
-#{{ page.title }}
-
-    $ nitr post log-groups -d@- << '__END__' 
-    {
-        name:"test log group",
-        metadata: [{key:"d",value:"e"}],
-        patterns: [{expression:"c"}],
-        templates: [{position:123,property:"f"}],
-        filters: [{expressions:[{key:"a",value:"b"}]}]
-    }
-    __END__
-
+##Inserir
 
 Retorno:
 

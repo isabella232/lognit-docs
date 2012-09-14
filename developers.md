@@ -1,38 +1,39 @@
 ---
 layout: page
-title: Desenvolvedores
+title: Recursos para Desenvolvedores
 description: "Como utilizar a API do Lognit para realizar consultas e para administrar o sistema"
 permalink: /developers/
 ---
 
-# Lognit API
+# {{ page.title }}
 
 O Lognit oferece, via HTTP e utilizando autenticação [basic auth](http://en.wikipedia.org/wiki/Basic_access_authentication), acesso à interface de consultas em tempo real e de histórico. Todas as funcionalidades do Lognit são acessíveis via API.
 
-Ao instalar o 
+Os exemplos mostrados aqui usando o [nitr](/nit#nitr) que é instalado justamente com o [nit](/nit).
 
-## Recursos
+## API REST
 
-**Disponíveis para qualquer usuário logado:**
+**Recursos para todos os usuários:**
 
-* [Busca](/developers/api/search)
-* [Dados pessoais](/developers/api/me)
+* [Consultas](/api/search)
+* [Dados pessoais](/api/me)
+* [Sugestão de Termos](/api/terms) _(para auto-complete)_
 
-**Disponíveis para administradores:**
+**Recursos para administradores:**
 
-* [Usuários](/developers/api/users)
-* [Grupos de Log](/developers/api/log-groups)
-* [Espaços](/developers/api/spaces)
-* [Equipes](/developers/api/teams)
-* [Estatísticas do cluster](/developers/api/stats)
-* [Pausa na indexação](/developers/api/pause)
-* [Expurgo](/developers/api/purge)
+* [Usuários](/api/users)
+* [Grupos de Log](/api/log-groups)
+* [Espaços](/api/spaces)
+* [Equipes](/api/teams)
+* [Estatísticas do cluster](/api/stats)
+* [Pausa na indexação](/api/pause)
+* [Expurgo](/api/purge)
 
-## Fazendo consultas
+## Realizando consultas
 
 O servidor Lognit utiliza o protocolo [bayeux](http://svn.cometd.com/trunk/bayeux/bayeux.html) para notificar os browsers e demais clientes sobre resultados de consulta. Este protocolo é implementado em diversas linguagens, o que torna o Lognit acessível para consultas pelos mais variados clientes.
 
-Um exemplo de cliente Lognit, em Java, é o [nit](https://github.com/intelie/lognit-cli), cliente *open source* de linha de comando.
+Um exemplo de cliente Lognit, em Java, é o [nit](/nit), cliente *open source* de linha de comando.
 
 Como esta, diversas outas aplicações podem não só enviar mensagens de log, como consultar por mensagens, da própria aplicação e de outras aplicações ou dispositivos.
 
