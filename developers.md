@@ -9,6 +9,24 @@ permalink: /developers/
 
 O Lognit oferece, via HTTP e utilizando autenticação [basic auth](http://en.wikipedia.org/wiki/Basic_access_authentication), acesso à interface de consultas em tempo real e de histórico. Todas as funcionalidades do Lognit são acessíveis via API.
 
+Ao instalar o 
+
+## Recursos
+
+**Disponíveis para qualquer usuário logado:**
+
+* [Busca](/developers/api/search)
+* [Dados pessoais](/developers/api/me)
+
+**Disponíveis para administradores:**
+
+* [Usuários](/developers/api/users)
+* [Grupos de Log](/developers/api/log-groups)
+* [Espaços](/developers/api/spaces)
+* [Equipes](/developers/api/teams)
+* [Estatísticas do cluster](/developers/api/stats)
+* [Pausa na indexação](/developers/api/pause)
+* [Expurgo](/developers/api/purge)
 
 ## Fazendo consultas
 
