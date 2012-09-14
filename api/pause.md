@@ -6,6 +6,12 @@ permalink: /pause/
 ---
 #{{ page.title }}
 
+Controle para pausar e continuar indexação em instâncias do Lognit. 
+
+Ponto de acesso:
+
+    http://server:port/rest/pause
+
 ##Pausando todas as instâncias
 
 	$ nitr post pause -d all=true

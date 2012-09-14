@@ -6,6 +6,12 @@ permalink: /terms/
 ---
 #{{ page.title }}
 
+Sugestão de termos para _auto-complete_.
+
+Ponto de acesso:
+
+    http://server:port/rest/terms
+
 ##Sugerindo um termo
 
     $ nitr get "terms?field=&term=test&size=20"

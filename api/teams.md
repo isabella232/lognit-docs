@@ -6,6 +6,12 @@ permalink: /teams/
 ---
 #{{ page.title }}
 
+Administração de equipes.
+
+Ponto de acesso:
+
+    http://server:port/rest/teams
+
 ##Listar
 
     $ nitr get teams?page=1

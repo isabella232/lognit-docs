@@ -6,6 +6,12 @@ permalink: /spaces/
 ---
 #{{ page.title }}
 
+Administração de espaços.
+
+Ponto de acesso:
+
+    http://server:port/rest/spaces
+
 ##Listar
 
     $ nitr get spaces?page=1

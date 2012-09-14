@@ -6,6 +6,12 @@ permalink: /stats/
 ---
 #{{ page.title }}
 
+Estatísticas do cluster.
+
+Ponto de acesso:
+
+    http://server:port/rest/stats
+
 ##Obtendo estatísticas
 
     $ nitr get stats

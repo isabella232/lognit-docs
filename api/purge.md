@@ -6,6 +6,12 @@ permalink: /purge/
 ---
 #{{ page.title }}
 
+Controle para expurgar mensagens do índice.
+
+Ponto de acesso:
+
+    http://server:port/rest/purge
+
 ##Expurgando por query
 
 	$ nitr post purge -d 'expression=*' -d all=true
