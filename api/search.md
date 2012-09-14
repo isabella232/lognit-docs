@@ -22,7 +22,7 @@ Retorno:
 
 Onde "channel" é o canal do [bayeux](http://svn.cometd.com/trunk/bayeux/bayeux.html) que irá retornar os resultados correspondentes.
 
-Além disso, informações sobre a sintaxe da consulta são retornadas no campo "info". Caso se trate de uma consulta de agregação
+Além disso, informações sobre a sintaxe da consulta são retornadas no campo "info". Caso se trate de uma [consulta de agregação](/aggregation-query)
 (tenha o operador **=>**), informações sobre os tipos de dados envolvidos também são retornados.
 
 ##Download dos resultados de uma consulta
