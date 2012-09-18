@@ -23,6 +23,16 @@ Retorno:
 
 ##Inserir
 
+    $ nitr post log-groups -d@- << '__END__' 
+    {
+        name:"test log group",
+        metadata: [{key:"d",value:"e"}],
+        patterns: [{expression:"c"}],
+        templates: [{position:123,property:"f"}],
+        filters: [{expressions:[{key:"a",value:"b"}]}]
+    }
+    __END__
+
 Retorno:
 
     {"id":"ff8081813682d0a101368450a92b0018","name":"test log group","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813682d0a101368450a92c0019","expressions":[{"id":"ff8081813682d0a101368450a92c001a",key:"a",value:"b"}]}],"spaces":[]}
