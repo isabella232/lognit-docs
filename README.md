@@ -11,7 +11,7 @@
 ## Execute a aplicação
 
     foreman start
-    
+
 > Esta documentação está disponível em [help.lognit.com](http://help.lognit.com)
 
 
