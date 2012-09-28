@@ -20,3 +20,5 @@ Note que, enviando os logs diretamente para o Lognit, torna-se possível até me
 > O Lognit recebe logs não só de aplicações, como de roteadores, switches, e diversos outros dispositivos, até mesmo móveis.
 
 > É também possível configurar *log appenders* em aplicações que utilizam as mais diversas linguagens, utilizando cliente syslog para enviar as mensagens diretamente para o Lognit.
+
+<a href="/configuration-samples">Veja alguns exemplos de configuração &rarr;</a>
