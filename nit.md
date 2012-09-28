@@ -14,11 +14,11 @@ _Lognit Command Line Interface_, ou somente **nit**, é um cliente alternativo p
 
 Para instalar a última versão disponível, execute no terminal:
 
-    sudo sh < <(curl -s https://raw.github.com/intelie/lognit-cli/master/install)
+    curl nit.lognit.com | sudo sh
 
 Para instalar alguma versão mais antiga, especifique a versão com **-s**.
 
-    sudo sh -s 1.0 < <(curl -s https://raw.github.com/intelie/lognit-cli/master/install) 
+    curl nit.lognit.com | sudo sh -s 1.2
 
 ## Primeiros passos.
 
