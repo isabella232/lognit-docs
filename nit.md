@@ -19,6 +19,11 @@ Para instalar a última versão disponível, execute no terminal:
 Para instalar alguma versão mais antiga, especifique a versão com **-s**.
 
     curl -s nit.lognit.com | sudo sh -s 1.2
+    
+Alternativamente, usando **wget**:
+
+    wget -qO- nit.lognit.com | sudo sh
+
 
 ## Primeiros passos.
 
