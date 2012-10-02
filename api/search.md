@@ -27,15 +27,15 @@ Além disso, informações sobre a sintaxe da consulta são retornadas no campo 
 
 ###Opções possíveis
 
-| Opção             | Descrição      |
-| ----------------- | ---------------|
-| **expression**    | a consulta em si | 
-| **windowLength**  | quantos resultados históricos serão retornados | 
-| **boundary**      | o ID da última mensagem vista, para paginação | 
-| **now**           | timestamp de agora, útil para estatísticas das últimas 24 horas | 
-| **down**          | direção da consulta, down (passado) ou up (futuro) | 
-| **stats**         | obter estatísticas da consulta histórica | 
-| **realtime**      | ativar consulta em tempo-real | 
+| Opção            |Padrão   | Descrição      |
+|------------------|---------| ---------------|
+| **expression**   |         | a consulta em si | 
+| **windowLength** | 100     | quantos resultados históricos serão retornados | 
+| **boundary**     |         | o ID da última mensagem vista, para paginação | 
+| **now**          |         | timestamp de agora, útil para estatísticas das últimas 24 horas | 
+| **down**         | true    | direção da consulta, down (passado) ou up (futuro) | 
+| **stats**        | false   | obter estatísticas da consulta histórica | 
+| **realtime**     | true    | ativar consulta em tempo-real | 
 
 ##Download dos resultados de uma consulta
 
