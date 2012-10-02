@@ -87,6 +87,13 @@ ul {
   margin-bottom: 20px;
 }
 
+table th {
+  background-color: #f1f1f1;
+}
+table td {
+  padding: 5px;
+}
+
 #main-menu {
   margin-bottom: 60px;
 }
@@ -97,7 +104,7 @@ ul {
 #main-menu h1 div {
   width: 149px;
   height: 63px;
-  background: url('/public/assets/logo_docs.png?1347485565') no-repeat 0 0;
+  background: url('/public/assets/logo_docs.png?1347568393') no-repeat 0 0;
 }
 #main-menu ul {
   margin: 0;

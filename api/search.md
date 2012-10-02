@@ -25,6 +25,18 @@ Onde "channel" é o canal do [bayeux](http://svn.cometd.com/trunk/bayeux/bayeux.
 Além disso, informações sobre a sintaxe da consulta são retornadas no campo "info". Caso se trate de uma [consulta de agregação](/aggregation-query)
 (tenha o operador **=>**), informações sobre os tipos de dados envolvidos também são retornados.
 
+###Opções possíveis
+
+| Opção             | Descrição      |
+| ----------------- | ---------------|
+| **expression**    | a consulta em si | 
+| **windowLength**  | quantos resultados históricos serão retornados | 
+| **boundary**      | o ID da última mensagem vista, para paginação | 
+| **now**           | timestamp de agora, útil para estatísticas das últimas 24 horas | 
+| **down**          | direção da consulta, down (passado) ou up (futuro) | 
+| **stats**         | obter estatísticas da consulta histórica | 
+| **realtime**      | ativar consulta em tempo-real | 
+
 ##Download dos resultados de uma consulta
 
     $ nitr get "search/download?expression=*&text=true"
