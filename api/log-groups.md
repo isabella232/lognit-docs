@@ -18,7 +18,7 @@ Ponto de acesso:
 
 Retorno:
 
-    {"data":[{"id":"ff8081813682d0a101368450a92b0018","name":"test log group","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813697fd94013697ffd66c0002","expressions":[{"id":"ff8081813697fd94013697ffd66c0003","key":"a","value":"b"}]}],"spaces":["teste"]}],"total":1,"page":1,"pageSize":10}
+    {"data":[{"id":"ff8081813682d0a101368450a92b0018","name":"test log group","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"expression":"a:b","spaces":["teste"]}],"total":1,"page":1,"pageSize":10}
 
 É possível também utilizar as opções ```filterExpr```, ```sortProperty``` e 
 ```sortDirection``` para filtrar e ordenar os registros. 
@@ -36,13 +36,13 @@ inverte a ordem da ordenação.
         metadata: [{key:"d",value:"e"}],
         patterns: [{expression:"c"}],
         templates: [{position:123,property:"f"}],
-        filters: [{expressions:[{key:"a",value:"b"}]}]
+        expression: 'a:b'
     }
     __END__
 
 Retorno:
 
-    {"id":"ff8081813682d0a101368450a92b0018","name":"test log group","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813682d0a101368450a92c0019","expressions":[{"id":"ff8081813682d0a101368450a92c001a",key:"a",value:"b"}]}],"spaces":[]}
+    {"id":"ff8081813a982494013a989a81cd0001","metadata":[{"key":"d","value":"e"}],"templates":[{"position":123,"property":"f"}],"patterns":[{"expression":"c"}],"name":"test log group","expression":"a:b","spaces":[]}
 
 
 ##Obter
@@ -52,7 +52,7 @@ Retorno:
 
 Retorno:
 
-    {"id":"ff8081813682d0a101368450a92b0018","name":"test log group","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813682d0a101368450a92c0019","expressions":[{"id":"ff8081813682d0a101368450a92c001a",key:"a",value:"b"}]}],"spaces":[]}
+    {"id":"ff8081813a982494013a989a81cd0001","metadata":[{"key":"d","value":"e"}],"templates":[{"position":123,"property":"f"}],"patterns":[{"expression":"c"}],"name":"test log group","expression":"a:b","spaces":[]}
 
 
 ##Atualizar
@@ -63,14 +63,15 @@ Retorno:
         metadata: [{key:"d",value:"e"}],
         patterns: [{expression:"c"}],
         templates: [{position:123,property:"f"}],
-        filters: [{expressions:[{key:"a",value:"b"}]}]
+        expression: 'a:b'
     }
     __END__
 
 
 Retorno:
 
-    {"id":"ff8081813682d0a101368450a92b0018","name":"test log group (modified)","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813682d0a101368452140d001b","expressions":[{"id":"ff8081813682d0a101368452140d001c",key:"a",value:"b"}]}],"spaces":[]}
+    {"id":"ff8081813a982494013a989a81cd0001","metadata":[{"key":"d","value":"e"}],"templates":[{"position":123,"property":"f"}],"patterns":[{"expression":"c"}],"name":"test log group (modified)","expression":"a:b","spaces":[]}
+
 
 ##Remover
 
@@ -78,7 +79,7 @@ Retorno:
 
 Retorno:
 
-    {"id":"ff8081813682d0a101368450a92b0018","name":"test log group (modified)","metadata":[{"key":"d","value":"e"}],"patterns":[{"expression":"c"}],"templates":[{"position":123,"property":"f"}],"filters":[{"id":"ff8081813682d0a101368452140d001b","expressions":[{"id":"ff8081813682d0a101368452140d001c",key:"a",value:"b"}]}],"spaces":[]}
+    {"id":"ff8081813a982494013a989a81cd0001","metadata":[{"key":"d","value":"e"}],"templates":[{"position":123,"property":"f"}],"patterns":[{"expression":"c"}],"name":"test log group","expression":"a:b","spaces":[]}
 
 
 ##Simulação
@@ -89,7 +90,7 @@ Retorno:
         metadata: [{key:"d",value:"e"}],
         patterns: [{expression:"c"}],
         templates: [{position:123,property:"f"}],
-        filters: [{expressions:[{key:"a",value:"b"}]}]
+        expression: 'a:b'
     }
     __END__
 
