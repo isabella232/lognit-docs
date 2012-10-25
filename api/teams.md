@@ -20,6 +20,16 @@ Retorno:
 
     {"data":[{"id":"fa474d49ecf941649580d42003101457","name":"Admin","permission":"MANAGE_ACCESS","hasPermissionToAllLogs":true,"members":[{"id":"f478d640307946398d0b81c74bbe0761","email":"lognit@intelie.net","displayName":"Administrator"}],"spaces":[]},{"id":"ff8081813697fd940136980846b10006","name":"Teste","permission":"MANAGE_LOGS","hasPermissionToAllLogs":false,"members":[{"id":"ff8081813697fd9401369804fff50005","email":"test@test.com","displayName":"Test da Silva"}],"spaces":[{"id":"ff8081813697fd9401369801bc720004","name":"teste"}]}],"total":2,"page":1,"pageSize":10}
 
+
+É possível também utilizar as opções ```filterExpr```, ```sortProperty``` e 
+```sortDirection``` para filtrar e ordenar os registros. 
+
+A opção ```filterExpr``` filtra os registros pela propriedade ```name```.
+
+Quando ```sortProperty``` está preenchida, ```sortDirection``` menor que zero
+inverte a ordem da ordenação.
+
+
 ##Inserir
 
     $ nitr post teams -d@- << '__END__' 

@@ -20,6 +20,16 @@ Retorno:
 
     {"data":[{"id":"ff8081813697fd9401369801bc720004","name":"teste","logGroups":[{"id":"ff808181355a836601355a8648760005","name":"teste"}]}],"total":1,"page":1,"pageSize":10}
 
+
+É possível também utilizar as opções ```filterExpr```, ```sortProperty``` e 
+```sortDirection``` para filtrar e ordenar os registros. 
+
+A opção ```filterExpr``` filtra os registros pela propriedade ```name```.
+
+Quando ```sortProperty``` está preenchida, ```sortDirection``` menor que zero
+inverte a ordem da ordenação.
+
+
 ##Inserir
 
 	$ nitr post spaces -d@- << '__END__' 
