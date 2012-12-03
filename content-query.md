@@ -16,13 +16,13 @@ O Lognit lida com algumas propriedades básicas que podem ser utilizadas na busc
 **date**
 Data no formato yyyyMMdd
 ```
-    date: [20120912 to 20120913]
+    date: [20120912 TO 20120913]
 ```
 
 **time**
 Hora no formato HHmmss
 ```
-    time: [120000 to 121000]
+    time: [120000 TO 121000]
 ```
 
 **host**
