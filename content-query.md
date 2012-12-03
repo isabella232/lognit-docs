@@ -92,6 +92,9 @@ procura pelos termos *http* e *404* somente no campo **text** que aconteceram en
 
 procura por todas as mensagens que contenham *http* em algum de seus campos, exceto as mensagens provenientes do host *server1*
 
+> Note que os operadores estão sempre em maiúsculo (**NOT**, **AND**, **OR**)
+
+
 > O sinal de subtração (**-**) pode ser utilizado em lugar da palavra **NOT** 
 
 ```
