@@ -16,13 +16,13 @@ O Lognit lida com algumas propriedades básicas que podem ser utilizadas na busc
 **date**
 Data no formato yyyyMMdd
 ```
-    date: [20120912 to 20120913]
+    date: [20120912 TO 20120913]
 ```
 
 **time**
 Hora no formato HHmmss
 ```
-    time: [120000 to 121000]
+    time: [120000 TO 121000]
 ```
 
 **host**
@@ -91,6 +91,9 @@ procura pelos termos *http* e *404* somente no campo **text** que aconteceram en
 ```
 
 procura por todas as mensagens que contenham *http* em algum de seus campos, exceto as mensagens provenientes do host *server1*
+
+> Note que os operadores estão sempre em maiúsculo (**NOT**, **AND**, **OR**)
+
 
 > O sinal de subtração (**-**) pode ser utilizado em lugar da palavra **NOT** 
 
