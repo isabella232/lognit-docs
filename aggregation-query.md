@@ -18,20 +18,21 @@ no mesmo formato do Lucene, já conhecido. Do lado direito, a query de agregaç�
 o seguinte formato:
 
 ```
-<query> => [<agregações>] [by <agrupamentos>] [every <janela>]
+<query> => [<agregações>] [by <agrupamentos>] [every <janela>] [if <condição>]
 ```
 
 ex:
 
 ```
-http 404 => count(), avg(response_time#) by host, app every 30 seconds
+http => count(), avg(response_time#) by host, app every 30 seconds if count() > 10
 ```
 
-_contagem e média do tempo de resposta de todos os http 404 agrupados por host e app numa janela de 30 segundos_
+_contagem e média do tempo de resposta de todos os requests http agrupados por host e app que tiveram mais de 10 erros numa janela de 30 segundos_
 
 ## Tipagem estática
 
-Os tipos envolvidos nas agregações são fortes e estáticos. Todas as propriedades oriúndas das mensagens são, por padrão, strings. Então, para permitir operações como "avg", é preciso primeiro converter o valor em número. Para isso existe o operador #.
+Os tipos envolvidos nas agregações são fortes e estáticos. Todas as propriedades oriúndas das mensagens são, por padrão, strings. Então, para permitir operações como "avg", é preciso primeiro converter o valor em número. 
+Para isso existe o operador #.
 
 ```
 response_time#
@@ -57,116 +58,215 @@ A formatação segue o mesmo padrão da classe DecimalFormat, do Java.
 
 Todas as partes da query de agregação são opcionais. Então,
 
-```
-http 404 =>
-```
-
-é o mesmo que:
-
-```
-http 404 => count() every 1 second
-```
+```http 404 =>``` é o mesmo que: ```http 404 => count() every 1 second```
 
 Além disso, é possível aplicar funções com uma sintaxe alternativa:
 
-```
-avg(response_time#) 
-```
-
-é equivalente a
-
-```
-response_time#:avg()
-```
-
-ou
-
-```
-response_time#:avg
-```
+```avg(response_time#)``` é equivalente a ```response_time#:avg()``` ou ```response_time#:avg```
 
 Isso é bastante útil para compor agregações
 
 ```
-response_time#:avg:if(response_time# > 1000)
+response_time#:avg:filter(response_time# > 1000)
 ```
 
 _média de todos os response times na janela que sejam maiores que 1000 milisegundos_
 
+## Reaproveitamento de expressões
+
+É possível definir expressões nomeadas (agregações ou não) para serem reutilizadas
+em agregações ou filtros. Por exemplo:
+
+```
+http => response_time# as time => time:avg, time:stdev
+```
+
+_média e desvio padrão de todos os tempos de resposta em requests http_
+
+Quando a expressão referenciada for a primeira da última definição, é possível
+omitir o nome na chamada de métodos.
+
+```
+http => response_time# => :avg, :stdev
+```
+
 ## Agregações disponíveis
+
+### Média
 
 ```
 avg(<number>)
+```
+
+```
 avg(response_time#)
 ```
 
-_média de todos os valores recebidos na janela de tempo definida_
+Calcula a média aritmética de todos os valores recebidos na janela de tempo definida.
+
+### Contagem
 
 ```
 count([<object>])
+```
+
+```
 count(http_status) ou count()
 ```
 
-_contagem de todos os valores não-nulos recebidos para a expressão passada por parâmetro na janela de tempo definida_
+Conta todos os valores não-nulos e não-falsos recebidos para a expressão passada por parâmetro na janela de tempo definida.
+
+É possível definir por exemplo:
 
 ```
-dcount(<object>...)
-dcount(user_agent, ip)
+count(http_status == '404')
 ```
 
-_contagem de todos os valores distintos para o conjunto de expressões passadas como parâmetro_
-
-Para economizar memória, para mais de 1000 valores distintos, a contagem passa a ser uma estimativa usando HyperLogLog.
+### Sumarização
 
 ```
 sum([<number>])
+```
+
+```
 sum(response_time#)
 ```
 
-_soma de todos os valores numéricos recebidos na janela de tempo definida_
+Soma todos os valores numéricos recebidos na janela de tempo definida.
+
+### Contagem de elementos distintos
+
+```
+dcount(<object>...)
+```
+
+```
+dcount(user_agent, ip)
+```
+
+Conta todos os valores distintos para o conjunto de expressões passadas como parâmetro.
+
+Para economizar memória, para mais de 64 valores distintos, a contagem passa a ser uma estimativa usando o algoritmo HyperLogLog.
+
+### Mínimo e máximo
 
 
 ```
 min(<comparable>) e max(<comparable>)
+```
+
+```
 min(response_time#)
 ```
 
-_menor (ou maior) valor recebido na janela de tempo definida_
+Menor (ou maior) valor recebido na janela de tempo definida.
+
+### Primeiro e último
 
 ```
 first(<object>) e last(<object>)
+```
+
+```
 first(response_time#)
 ```
 
-_primeiro (ou último) valor recebido na janela de tempo definida (comparado utilizando o id da mensagem de log, para ser distribuído)_
+Primeiro (ou último) valor recebido na janela de tempo definida (comparado utilizando o id da mensagem de log, para ser distribuído).
+
+### "Todos" e "algum".
+
+```
+all(<boolean>) e any(<boolean>)
+```
+
+```
+all(http_status == '404')
+```
+
+Retorna true se todos os valores satisfizerem a condição especificada.
+
+```
+any(http_status == '404')
+```
+
+Retorna true se algum dos valores satisfizerem a condição especificada.
+
+
+### Desvio padrão
 
 ```
 stdev(<number>)
+```
+
+```
 stdev(response_time#)
 ```
 
-_desvio padrão de todos os valores recebidos na janela de tempo definida_
+Desvio padrão de todos os valores recebidos na janela de tempo definida.
+
+### Filtro
 
 ```
-if(<aggregation>, <condition>)
-avg(response_time#):if(response_time# > 1000)
+filter(<aggregation>, <condition>)
 ```
 
-_modificador que somente agrega um valor se a condição for verdadeira_
-
 ```
-overlast(<aggregation>, <number literal>)
-avg(response_time#):overlast(5) 
+avg(response_time#):filter(response_time# > 1000)
 ```
 
-_modificador que agrega os resultados das últimas janelas_
+Modificador que somente agrega um valor se a condição for verdadeira.
+
+### Prev
+
+```
+prev(<aggregation>[, <number literal>])
+```
+
+```
+count():prev(2)
+```
+
+Obtém o antepenúltimo resultado de agregação. 
+
+```count():prev```
+
+Retorna o penúltimo resultado de agregação.
+
+```count() > count():prev```
+
+Verifica se a contagem na janela atual é maior que na janela anterior.
+
+
+### Agregações sobre agregações
+
+Algumas agregações tem sua versão "last", que permitem aplicar uma agregação 
+sobre outra. Por exemplo:
 
 ```
 avglast(<numeric aggregation>, <number literal>)
+```
+
+```
 count():avglast(5) 
 ```
 
-_modificador que efetua a média os resultados das últimas janelas_
+Obtém a média da contagem das últimas 5 janelas.
+
+Outras operações: ```stdevlast```, ```alllast```, ```anylast```, ```sumlast```, ```countlast```.
+
+Ainda há outra agregação ```overlast```:
+
+```
+overlast(<aggregation>, <number literal>)
+```
+
+```
+avg(response_time#):overlast(5) 
+```
+
+Que "repete" a agregação sobre as últimas n janelas. Se for uma contagem, ele 
+soma as últimas janelas, se for uma média, ele faz a média (ponderada) das janelas.
+
 
 ## Operadores e funções disponíveis
 
