@@ -252,7 +252,7 @@ count():avglast(5)
 
 Obtém a média da contagem das últimas 5 janelas.
 
-Outras operações: ```stdevlast```, ```alllast```, ```anylast```, ```sumlast```, ```countlast```.
+Outras operações: ```stdevlast```, ```alllast```, ```anylast```, ```sumlast```, ```countlast```, ```minlast``` e ```maxlast```.
 
 Ainda há outra agregação ```overlast```:
 
