@@ -281,6 +281,9 @@ soma as últimas janelas, se for uma média, ele faz a média (ponderada) das ja
 
 ### Operadores de comparação:
     ==; !=; >; <; >=; <=
+    
+    <? (valor mínimo)
+    >? (valor máximo)
 
 ### Operadores lógicos:
     &, && ou "and"
