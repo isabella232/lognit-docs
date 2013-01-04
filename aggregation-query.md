@@ -300,6 +300,9 @@ reponse_time# > 1000 and (host == 'aaa' || host == 'bbb')
 ### Operador ternário
 ```
 condition ? if-true, if-false
+```
+
+```
 response_time < 100 ? 'great!', 'bad...'
 ```
 
@@ -312,12 +315,18 @@ response_time < 100 ? 'great!', response_time < 1000 ? 'ok.', 'bad...'
 ### Operador de coalescência de nulos:
 ```
 <expressão> ?? <valor se for expressão for nula>
+```
+
+```
 http_status ?? "000"
 ```
 
 ### Operador de coerção numérica
 ```
 <string>#([<locale>[, <format>]])
+```
+
+```
 response_time#('pt-br', '###,###.00')
 ```
 
@@ -325,6 +334,9 @@ response_time#('pt-br', '###,###.00')
 
 ```
 <number>#([<locale>[, <format>]])
+```
+
+```
 @size#('pt-br', '###,###.00')
 ```
 
@@ -342,6 +354,9 @@ pow(<number>, <exponent>) e log(<number>, <base>)
 
 ```
 <number>:bytes([<precision>])
+```
+
+```
 @size:avg:bytes(3) 
 ```
 
