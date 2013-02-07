@@ -15,10 +15,13 @@ No exemplo abaixo, todos os logs de um servidor estão sendo enviados para a por
 
 ![Configurando o syslog](/public/assets/syslog_conf.png "Configurando o syslog")
 
+> É também possível configurar *log appenders* em aplicações que utilizam as mais diversas linguagens, utilizando cliente syslog para enviar as mensagens diretamente para o Lognit. [Veja alguns exemplos de configuração &rarr;](/configuration-samples)
+
+> Para obter logs do IIS e Event Log no Windows, é preciso instalar um coletor especial. [Veja como instalar e configurar coletores no Windows &rarr;](/windows)
+
 Note que, enviando os logs diretamente para o Lognit, torna-se possível até mesmo a utilização de máquinas sem disco como servidores de aplicação, caso as aplicações utilizem outros servidores para armazenamento de seus dados.
 
 > O Lognit recebe logs não só de aplicações, como de roteadores, switches, e diversos outros dispositivos, até mesmo móveis.
 
-> É também possível configurar *log appenders* em aplicações que utilizam as mais diversas linguagens, utilizando cliente syslog para enviar as mensagens diretamente para o Lognit.
 
-<a href="/configuration-samples">Veja alguns exemplos de configuração &rarr;</a>
+
