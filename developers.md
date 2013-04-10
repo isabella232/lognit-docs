@@ -18,6 +18,7 @@ Os exemplos mostrados aqui usam o [nitr](/nit/#nitr) que é instalado juntamente
 * [Consultas](/api/search)
 * [Dados pessoais](/api/me)
 * [Sugestão de Termos](/api/terms) _(para auto-complete)_
+* [Gists](/api/gists)
 
 **Recursos para administradores:**
 
