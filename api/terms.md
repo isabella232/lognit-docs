@@ -1,6 +1,6 @@
 ---
 layout: page
-title: API de Sugestão de Termos
+title: API de Sugestão de Termos (antiga)
 description: "Exemplos de uso"
 permalink: /terms/
 ---
