@@ -3,6 +3,8 @@ body {
   font-size: 13px;
   color: #333;
   line-height: 18px;
+  background: url("logo_live.png") no-repeat 60px 30px;
+  background-attachment: fixed;
 }
 
 .static-content {
@@ -104,7 +106,7 @@ table td {
 #main-menu h1 div {
   width: 149px;
   height: 63px;
-  background: url('/public/assets/logo_docs.png?1347568393') no-repeat 0 0;
+  background: url('/public/assets/logo_docs.png?1378914612') no-repeat 0 0;
 }
 #main-menu ul {
   margin: 0;
