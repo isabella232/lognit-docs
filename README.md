@@ -7,11 +7,13 @@
 
     gem install bundler
     bundle install
-    
+
 ## Execute a aplicação
 
     jekyll --server
     bundle exec guard
+
+A aplicação estará disponível na porta 4000
 
 > O jekyll irá gerar o conteúdo da página em _site, o guard irá processar o conteúdo estático, como javascripts e folhas de estilo, quando houver mudanças nos códigos-fonte.
 
