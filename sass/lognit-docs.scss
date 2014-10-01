@@ -3,14 +3,6 @@
 @import "compass/utilities/general/clearfix";
 @import "compass/typography/text/ellipsis";
 
-
-body {
-  font-family: Arial, sans-serif;
-  font-size:13px;
-  color:#333;
-  line-height:18px;
-}
-
 $left-margin: 60px;
 $title-padding: 20px;
 
@@ -21,6 +13,17 @@ $content-left-margin: 40px;
 $content-width: 500px;
 $content-top: 78px;
 $content-bottom: 80px;
+
+
+body {
+  font-family: Arial, sans-serif;
+  font-size:13px;
+  color:#333;
+  line-height:18px;
+  background: url("logo_live.png") no-repeat $left-margin 30px;
+  background-attachment: fixed;
+}
+
 
 .static-content {
   position: fixed;

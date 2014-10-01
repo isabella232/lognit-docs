@@ -5,3 +5,4 @@ exclude: [CNAME, compass.rb, Gemfile, Gemfile.lock, Guardfile, sass, javascripts
 auto: true
 
 base_path: help.lognit.com
+relative_permalinks: true
