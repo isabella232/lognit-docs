@@ -9,23 +9,17 @@ permalink: /aggregation-query/
 
 Para contar, por exemplo, quantos erros *http 404* estão ocorrendo a cada minuto, é possível escrever a consulta:
 
-```
-http 404 => count() every 1 minute
-```
+    http 404 => count() every 1 minute
 
 O que transforma uma consulta normal em uma agregação é o operador "=>". Do lado esquerdo fica a consulta, 
 no mesmo formato do Lucene, já conhecido. Do lado direito, a query de agregação. No final uma agregação tem 
 o seguinte formato:
 
-```
-<query> => [<agregações>] [by <agrupamentos>] [every <janela>] [if <condição>]
-```
+    <query> => [<agregações>] [by <agrupamentos>] [every <janela>] [if <condição>]
 
 ex:
 
-```
-http => count(), avg(response_time#) by host, app every 30 seconds if count() > 10
-```
+    http => count(), avg(response_time#) by host, app every 30 seconds if count() > 10
 
 _contagem e média do tempo de resposta de todos os requests http agrupados por host e app que tiveram mais de 10 erros numa janela de 30 segundos_
 
