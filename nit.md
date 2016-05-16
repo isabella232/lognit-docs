@@ -34,7 +34,7 @@ O cliente irá solicitar usuário e senha. Caso deseje especificá-los na linha 
 
 ## Realizando consultas
 
-Para efetuar uma consulta histórica no Lognit, basta específica o texto da consulta na linha de comando. Assim:
+Para efetuar uma consulta histórica no Lognit, basta especificar o texto da consulta na linha de comando. Assim:
 
     nit 'group:http status:4?? NOT status:403'
 
@@ -90,7 +90,7 @@ Por exemplo:
 
 Por baixo dos panos, o que acontece é algo parecido com:
 
-    curl -X get -s -L -H 'Content-Type:application/json' \ 
+    curl -X get -s -L -H 'Content-Type:application/json' \
          -b ~/.lognit/state "http://${server}/rest/me/welcome"
 
 
