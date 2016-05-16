@@ -47,12 +47,14 @@ RTFM: [http://docs.python.org/library/logging.handlers.html#sysloghandler](http:
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     syslog = SysLogHandler(address='/dev/log',facility=logging.handlers.SysLogHandler.LOG_LOCAL3)
-    formatter = logging.Formatter('APP_NAME: %(name)s %(message)s')
+    formatter = logging.Formatter('APP_NAME: %(name)s %(message)s\n')
     syslog.setFormatter(formatter)
     logger.addHandler(syslog)
 
 
-_ATENÇAO!!! Não é preciso configurar o formatter do módulo de logging para logar o timestamp e nível do log (debug, info e etc). Isto já será feito pelo próprio syslog. Alterar o APP_NAME pelo nome da sua aplicação para que ela seja logada. As mensagens devem ser logadas como string e não unicode_
+*ATENÇÃO!!! Não é preciso configurar o formatter do módulo de logging para logar o timestamp e nível do log (debug, info e etc). Isto já será feito pelo próprio syslog. Alterar o APP_NAME pelo nome da sua aplicação para que ela seja logada. As mensagens devem ser logadas como string e não unicode*
+
+> IMPORTANTE!!! Atualmente é necessário adicionar o "\n" no formatter. Sem esse   "\n" a mensagem não vai chegar no Lognit
 
 ## Python - Django
 
