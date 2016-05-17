@@ -12,24 +12,12 @@ Adicione a configuração abaixo no arquivo */etc/rsyslog.conf*
 
     template(name="tcpinput" type="list") {
         constant(value="{")
-          constant(value="\"timestamp\":\"")
-          property(name="timereported" dateFormat="rfc3164")
-
-          constant(value="\",\"host\":\"")
-          property(name="hostname")
-
-          constant(value="\",\"severity\":\"")
-          property(name="syslogseverity-text")
-
-          constant(value="\",\"facility\":\"")
-          property(name="syslogfacility-text")
-
-          constant(value="\",\"tag\":\"")
-          property(name="syslogtag" format="json")
-
-          constant(value="\",\"message\":\"")
-          property(name="msg" format="json")
-
+          constant(value="\"timestamp\":\"")      property(name="timereported" dateFormat="rfc3164")
+          constant(value="\",\"host\":\"")        property(name="hostname")
+          constant(value="\",\"severity\":\"")    property(name="syslogseverity-text")
+          constant(value="\",\"facility\":\"")    property(name="syslogfacility-text")
+          constant(value="\",\"tag\":\"")         property(name="syslogtag" format="json")
+          constant(value="\",\"message\":\"")     property(name="msg" format="json")
           constant(value="\",\"__type\":\"Syslog\"")
         constant(value="\"}\n")
     }
