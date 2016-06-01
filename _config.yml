@@ -5,4 +5,13 @@ exclude: [CNAME, compass.rb, Gemfile, Gemfile.lock, Guardfile, sass, javascripts
 auto: true
 
 base_path: help.lognit.com
-relative_permalinks: true
+
+# Build settings
+markdown: kramdown
+highlighter:      rouge
+
+kramdown:
+  parse_block_html: true
+
+gems:
+  - jekyll-paginate

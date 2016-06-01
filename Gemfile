@@ -1,13 +1,7 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-gem 'guard'
-gem 'guard-compass'
-gem 'guard-jasmine-headless-webkit'
-gem 'guard-livereload'
-gem 'guard-sprockets'
-gem 'ejs'
-gem 'rb-fsevent'
-gem 'foreman'
-gem 'jekyll'
+require 'json'
+require 'open-uri'
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
-require 'rbconfig'
+gem 'github-pages', versions['github-pages']
